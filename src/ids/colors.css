@@ -18,10 +18,10 @@ body {
 .dark {
   --ids__text-RGB: 240, 240, 240;
   --ids__link-RGB: 240, 240, 240;
-  --ids__hover-RGB: 255, 100, 90;
+  --ids__hover-RGB: 0, 145, 255;
   --ids__accent-RGB: 57, 53, 216;
   --ids__mark-RGB: 255, 200, 29;
-  --ids__surface-RGB: 45, 47, 48;
+  --ids__surface-RGB: 240, 245, 250;
   --ids__background-RGB: 0, 17, 38;
 
   color: rgba(var(--ids__text-RGB), 1);

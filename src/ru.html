@@ -1,10 +1,10 @@
 {% extends 'layout.html' %} {% set pageTitle = 'Другая жизнь. Фильм Фёдора Овчинникова' %} {% block content %}
-<header class="header">
+<!-- <header class="header">
   <div class="line">
     · Другая жизнь · 147 дней в тундре · Фильм Фёдора Овчинникова · Премьера весной 2026 · Другая жизнь · 147 дней в тундре · Фильм Фёдора Овчинникова · Премьера весной 2026 ·
     Другая жизнь · 147 дней в тундре · Фильм Фёдора Овчинникова · Премьера весной 2026 ·
   </div>
-</header>
+</header> -->
 
 <div class="title">
   <div class="poster">
@@ -29,7 +29,7 @@
       <a href="#journal">Дневник</a>
     </div>
     <div class="nav-item">
-      <a href="#trailer">Трейлер</a>
+      <a href="#trailer"> Трейлер </a>
     </div>
     <div class="nav-item">
       <a href="#gallery">Галерея</a>
@@ -37,22 +37,64 @@
     <div class="nav-item">
       <a href="#author">Автор</a>
     </div>
-    </div>
   </div>
 </div>
 <div class="dark">
   <div class="ids__wrapper">
+    <div class="ids__space S"></div>
+    <div id="about"></div>
+    <div class="ids__space M"></div>
+    <div class="about">
+      <p>
+        <strong>Другая жизнь.</strong> Фильм-путешествие, фильм-размышление и фильм-принятие. Здесь вас ждёт настоящий холод тундры и тепло очана, опустошение и наполнение,
+        осознание хрупкости, условности и неообязательности «цивилизованного» мира. Эта картина поможет на два часа оставить свою жизнь и посмотреть другую.
+      </p>
+    </div>
+
+    <div id="journal"></div>
+    <div class="ids__space M"></div>
+
     <div class="journal">
-      <div class="journal-nav">
-        <!-- <div class="journal-nav-caption">Дневник  ·  25 марта  ·  5-й день</div> -->
-        <div class="journal-nav-icon">↗</div>
+      <div class="journal-image">
+        <img src="/assets/photo_158@13-09-2025_17-58-28.jpg" />
       </div>
       <div class="journal-record">
-        Вообще мне первый раз так плохо. Не куда сбежать. Больше всего пугает четыре месяца. Просыпаюсь каждую ночь с ужасом) Возможно, будет такое же принятие как в бизнесе в
-        сложные безвыходные моменты. В какие-то моменты ужас же тоже был, когда заводил себя в поисках приключений в сложные ситуации, но выбора не было - надо было жить, а сейчас
-        вроде как бы выбор есть. Можно сбежать.
+        <a class="journal-nav" href="#">
+          <div class="journal-nav-caption">Дневник  ·  25 марта  ·  5-й день в тундре</div>
+          <div class="journal-nav-icon">
+            <svg class="reload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.044 25.903">
+              <path
+                class="cls-1"
+                d="M12.247,5.272c1.803-.386,3.748-.597,5.775-.597,9.401,0,17.022,4.528,17.022,10.114s-7.621,10.114-17.022,10.114S1,20.374,1,14.789c0-1.498.548-2.92,1.532-4.199" />
+              <polyline class="cls-1" points="17.722 .87 10.178 5.151 18.142 8.68" />
+            </svg>
+          </div>
+        </a>
+        <div class="journal-record-text">
+          Вообще мне первый раз так плохо. Не куда сбежать. Больше всего пугает четыре месяца. Просыпаюсь каждую ночь с ужасом) Возможно, будет такое же принятие как в бизнесе в
+          сложные безвыходные моменты. В какие-то моменты ужас же тоже был, когда заводил себя в поисках приключений в сложные ситуации, но выбора не было — надо было жить, а
+          сейчас вроде как бы выбор есть. Можно сбежать.
+        </div>
       </div>
     </div>
+
+    <div class="ids__space XS"></div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="/assets/photo_159@13-09-2025_17-58-28.jpg" />
+      </div>
+      <div class="gallery-item S">
+        <img src="/assets/photo_147@13-09-2025_17-58-28.jpg" />
+      </div>
+      <div class="gallery-item S">
+        <img src="/assets/photo_129@13-09-2025_17-58-27.jpg" />
+      </div>
+      <!-- <div class="gallery-item S">
+        <img src="/assets/photo_135@13-09-2025_17-58-27.jpg" />
+      </div> -->
+    </div>
+
     <div class="illustrations"></div>
   </div>
   <footer class="footer">
