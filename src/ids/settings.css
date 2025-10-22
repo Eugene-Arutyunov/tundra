@@ -6,21 +6,39 @@
 
 
 @font-face {
-  font-family: "CoFoSansSemi-Mono";
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Arsenal-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Arsenal-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
   font-style: normal;
   font-display: swap;
-  src: url("fonts/CoFoSansSemi-Mono-VF-Trial.ttf") format("truetype");
+  src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
 }
 
 
 :root {
-  --mono: "CoFoSansSemi-Mono";
+  --sans: "Inter";
+  --gothic: "Arsenal";
+
 }
 
 body {
-  font-family: var(--mono);
+  font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
-  font-weight: 350;
+  font-weight: 500;
 }
 
 /* Density */
