@@ -1,4 +1,4 @@
-module.exports = function (conf) {
+module.exports = (conf) => {
   conf.addPassthroughCopy("./src/ids");
   conf.addPassthroughCopy("./src/index.js");
   conf.addPassthroughCopy("./src/assets");

@@ -1,0 +1,70 @@
+/* Vidstack player customization - minimal interface */
+
+media-player {
+  background: #000;
+}
+
+/* Center play button */
+media-play-button {
+  display: grid;
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+
+  place-content: center;
+  place-items: center;
+
+  z-index: 1;
+
+  .circle {
+    border-radius: 50%;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    place-items: center;
+  }
+}
+
+media-play-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgb(var(--ids__hover-RGB));
+}
+
+media-play-button:not([data-paused]) {
+  .play {
+    display: none;
+  }
+  .pause {
+    display: block;
+  }
+}
+media-play-button[data-paused] {
+  .play {
+    display: block;
+  }
+  .pause {
+    display: none;
+  }
+}
+
+media-play-button:not([data-paused]) {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show on hover when playing */
+media-player:hover media-play-button:not([data-paused]) {
+  opacity: 1;
+}
+
+/* Hide YouTube/Vimeo native controls */
+media-player iframe {
+  pointer-events: none;
+}
+
+/* Allow clicks only on our custom button */
+media-play-button {
+  pointer-events: auto;
+}
