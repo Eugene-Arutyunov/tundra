@@ -6,6 +6,7 @@
     "dev": "eleventy --serve"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "vidstack": "^1.12.13"
   }
 }
