@@ -45,12 +45,18 @@ media-player {
   &[data-playing] media-play-button.ids-play {
     display: none;
   }
+  media-poster {
+    position: absolute;
+    inset: 0;
+  }
+  &[data-started] media-poster {
+    display: none;
+  }
 
   media-play-button.ids-play {
     position: absolute;
     z-index: 1;
-    inset-block: 0;
-    inset-inline: 0;
+    inset: 0;
     display: grid;
     place-items: center;
 
