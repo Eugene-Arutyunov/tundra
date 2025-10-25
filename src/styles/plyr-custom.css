@@ -1,5 +1,8 @@
-/* Plyr customization with IDS color system */
+/* ========================================
+   Plyr & Vidstack customization with IDS
+   ======================================== */
 
+/* Plyr CSS Variables */
 :root {
   /* Main accent color - using IDS hover color (blue) */
   --plyr-color-main: rgb(var(--ids__hover-RGB));
@@ -14,6 +17,8 @@
   /* Live edge color */
   --plyr-progress-live-edge-color: rgb(var(--ids__hover-RGB));
 }
+
+/* Animations */
 @keyframes video-loading {
   0% {
     background-position: -100% 0;
@@ -22,9 +27,13 @@
     background-position: -200% 0;
   }
 }
+
+/* Vidstack Media Player Styles */
 media-player {
   display: block;
   aspect-ratio: 16 / 9;
+
+  /* Embedded iframe */
   iframe {
     pointer-events: none;
     display: block;
@@ -32,25 +41,22 @@ media-player {
     width: 100%;
   }
 
-  &[data-waiting] {
-    media-play-button.ids-play {
-      animation: video-loading 1.5s ease-out infinite;
-    }
+  /* Custom play button */
+  &[data-playing] media-play-button.ids-play {
+    display: none;
   }
 
   media-play-button.ids-play {
-    display: none;
-  }
-  &:not([data-playing]) media-play-button.ids-play {
     position: absolute;
     z-index: 1;
     inset-block: 0;
     inset-inline: 0;
     display: grid;
     place-items: center;
-    place-items: center;
+
     & > div {
       cursor: pointer;
+      color: rgb(var(--ids__surface-RGB));
       background-image: linear-gradient(
         to right,
         rgba(var(--ids__link-RGB), 1),
@@ -60,25 +66,25 @@ media-player {
       );
       background-size: 201% 100%;
       background-position: -100% 0;
-
       border: solid 0 transparent;
       border-radius: 1.2em;
       padding: 0.65em 1.2em 0.6em;
     }
   }
-  &[data-waiting] {
-    media-play-button.ids-play > div {
-      animation: video-loading 1.5s ease-out infinite;
-    }
-  }
-  &:not([data-started]) {
-    media-plyr-layout {
-      opacity: 0;
-    }
+
+  /* Loading state animation */
+  &[data-waiting] media-play-button.ids-play > div {
+    animation: video-loading 1.5s ease-out infinite;
   }
 
+  /* Hide controls before video starts */
+  &:not([data-started]) media-plyr-layout {
+    opacity: 0;
+  }
+
+  /* Plyr layout customization */
   media-plyr-layout {
-    z-index: 2 important;
+    z-index: 2 !important;
 
     media-play-button.plyr__control--overlaid {
       display: none !important;
