@@ -1,27 +1,87 @@
 /* Plyr customization with IDS color system */
 
 :root {
-    /* Main accent color - using IDS hover color (blue) */
-    --plyr-color-main: rgb(var(--ids__hover-RGB));
+  /* Main accent color - using IDS hover color (blue) */
+  --plyr-color-main: rgb(var(--ids__hover-RGB));
 
-    /* Focus outline color */
-    --plyr-focus-visible-color: rgb(var(--ids__hover-RGB));
+  /* Focus outline color */
+  --plyr-focus-visible-color: rgb(var(--ids__hover-RGB));
 
-    /* Range/progress colors */
-    --plyr-range-fill-background: rgb(var(--ids__hover-RGB));
-    --plyr-control-toggle-checked-background: rgb(var(--ids__hover-RGB));
+  /* Range/progress colors */
+  --plyr-range-fill-background: rgb(var(--ids__hover-RGB));
+  --plyr-control-toggle-checked-background: rgb(var(--ids__hover-RGB));
 
-    /* Live edge color */
-    --plyr-progress-live-edge-color: rgb(var(--ids__hover-RGB));
+  /* Live edge color */
+  --plyr-progress-live-edge-color: rgb(var(--ids__hover-RGB));
 }
-
+@keyframes video-loading {
+  0% {
+    background-position: -100% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
 media-player {
-    display: block;
-    aspect-ratio: 16 / 9;
-}
-media-player iframe {
+  display: block;
+  aspect-ratio: 16 / 9;
+  iframe {
     pointer-events: none;
     display: block;
     height: 100%;
     width: 100%;
+  }
+
+  &[data-waiting] {
+    media-play-button.ids-play {
+      animation: video-loading 1.5s ease-out infinite;
+    }
+  }
+
+  media-play-button.ids-play {
+    display: none;
+  }
+  &:not([data-playing]) media-play-button.ids-play {
+    position: absolute;
+    z-index: 1;
+    inset-block: 0;
+    inset-inline: 0;
+    display: grid;
+    place-items: center;
+    place-items: center;
+    & > div {
+      cursor: pointer;
+      background-image: linear-gradient(
+        to right,
+        rgba(var(--ids__link-RGB), 1),
+        rgba(var(--ids__link-RGB), 1) 49%,
+        rgba(var(--ids__hover-RGB), 1) 49%,
+        rgba(var(--ids__hover-RGB), 1)
+      );
+      background-size: 201% 100%;
+      background-position: -100% 0;
+
+      border: solid 0 transparent;
+      border-radius: 1.2em;
+      padding: 0.65em 1.2em 0.6em;
+    }
+  }
+  &[data-waiting] {
+    media-play-button.ids-play > div {
+      animation: video-loading 1.5s ease-out infinite;
+    }
+  }
+  &:not([data-started]) {
+    media-plyr-layout {
+      opacity: 0;
+    }
+  }
+
+  media-plyr-layout {
+    z-index: 2 important;
+
+    media-play-button.plyr__control--overlaid {
+      display: none !important;
+    }
+  }
 }
