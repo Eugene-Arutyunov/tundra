@@ -76,10 +76,27 @@ media-player {
       border-radius: 1.2em;
       padding: 0.65em 1.2em 0.6em;
     }
+
+    &:hover > div {
+      background-image: linear-gradient(
+        to right,
+        rgba(var(--ids__hover-RGB), 1),
+        rgba(var(--ids__hover-RGB), 1) 49%,
+        rgba(var(--ids__link-RGB), 1) 49%,
+        rgba(var(--ids__link-RGB), 1)
+      );
+    }
   }
 
   /* Loading state animation */
   &[data-waiting] media-play-button.ids-play > div {
+    background-image: linear-gradient(
+      to right,
+      rgba(var(--ids__hover-RGB), 1),
+      rgba(var(--ids__hover-RGB), 1) 49%,
+      rgba(var(--ids__link-RGB), 1) 49%,
+      rgba(var(--ids__link-RGB), 1)
+    );
     animation: video-loading 1.5s ease-out infinite;
   }
 
