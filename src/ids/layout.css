@@ -31,9 +31,9 @@
   }
 
   &.L {
-    width: 84%;
-    margin: 0 8%;
-    max-width: 1260px;
+    width: 60%;
+    margin: 0 auto;
+    max-width: 1120px;
 
     @media (width < 767px) {
       width: 100%;

@@ -1,9 +1,9 @@
 .title {
-  padding: 1.5em 0;
+  padding: 1.5em 0 1em;
   text-align: center;
 
   & h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-family: var(--gothic);
     line-height: 0.9;
     margin-bottom: 0.4em;
