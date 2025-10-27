@@ -35,9 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Initialize: set the first record as the current one and update UI
+  // Initialize: set a random record as the current one and update UI
   if (journalRecords.length > 0) {
-    currentRecord = journalRecords[0];
+    const randomIndex = Math.floor(Math.random() * journalRecords.length);
+    currentRecord = journalRecords[randomIndex];
+    // Set display and opacity without animation on initial load
+    currentRecord.style.display = 'block';
+    currentRecord.style.opacity = '1';
     updateUI(currentRecord);
   }
 

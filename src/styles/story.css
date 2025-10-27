@@ -172,9 +172,8 @@
       opacity: 1;
     }
 
-    &:first-of-type {
-      display: block;
-      opacity: 1;
+    & .date {
+      display: none;
     }
 
     & p {

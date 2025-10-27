@@ -1,6 +1,5 @@
 {% extends 'layout.html' %} {% set pageTitle = 'Другая жизнь. Фильм Фёдора Овчинникова' %} {% block content %}
 
-
 <div class="ids__wrapper">
   <div class="title">
     <h1>147 дней в тундре</h1>
@@ -15,13 +14,13 @@
         </media-provider>
         <media-plyr-layout></media-plyr-layout>
         <media-play-button class="ids-play" custom-icons>
-          <div slot="play-icon">▶ Play</div>
+          <div slot="play-icon">▶</div>
         </media-play-button>
       </media-player>
     </div>
   </div>
   <div class="ids__space XS"></div>
-  <div class="video">
+  <!-- <div class="video">
     <div class="video-nav"></div>
     <div class="video-player">
       <iframe
@@ -31,10 +30,9 @@
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
     </div>
-  </div>
+  </div> -->
   <div class="ids__space XS"></div>
   {% include "journal.html" %}
 </div>
