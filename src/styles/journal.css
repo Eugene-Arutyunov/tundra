@@ -1,0 +1,91 @@
+.journal-notes {
+  border: 1px solid rgba(var(--ids__text-RGB), 0.2);
+  border-radius: 0.4em;
+  overflow: hidden;
+  box-shadow: 0 0.2em 0.4em 0 rgba(var(--ids__text-RGB), 0.1);
+  min-height: 20em;
+
+  & .journal-notes-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8em 1em 0.8em 1.2em;
+    background-color: rgba(var(--ids__background-RGB), 1);
+    box-shadow: 0 0 0.4em 0 rgba(var(--ids__text-RGB), 0.2);
+
+    & .notes-header-title {
+      font-weight: 600;
+    }
+
+    & .notes-header-reload-icon {
+      position: relative;
+      width: 1.1em;
+      height: 1.2em;
+
+      /* &::before {
+        content: '';
+        position: absolute;
+        top: -0.3em;
+        left: -0.3em;
+        right: -0.3em;
+        bottom: -0.3em;
+        background-color: rgba(var(--ids__mark-RGB), 1);
+        border-radius: 50%;
+      } */
+
+      & svg {
+        position: relative;
+
+        & .cls-1 {
+          stroke: rgba(var(--ids__mark-RGB), 1);
+          stroke-miterlimit: 10;
+          stroke-width: 10px;
+          fill: none;
+          transition: stroke 0.5s ease;
+        }
+      }
+    }
+
+
+  }
+
+  & .notes-header-date {
+    position: relative;
+    border-top: 1px solid rgba(var(--ids__text-RGB), 0.2);
+    color: rgba(var(--ids__text-RGB), 0.5);
+    font-size: 0.9em;
+    padding-top: 0.2em;
+    text-align: center;
+
+
+  }
+
+  & .note {
+    padding: 1.2em 2em 2em 1.2em;
+
+    & .note-title {
+      & h2 {
+        font-weight: 700;
+
+
+      }
+    }
+
+    & .note-text {
+      & .journal-record {
+
+        display: none;
+
+        &:first-child {
+          display: block;
+        }
+
+        & .date {
+          display: none;
+        }
+      }
+
+    }
+
+  }
+
+}

@@ -15,14 +15,15 @@ body {
   background-color: rgba(var(--ids__background-RGB), 1);
 }
 
-.dark {
-  --ids__text-RGB: 240, 240, 240;
-  --ids__link-RGB: 240, 240, 240;
-  --ids__hover-RGB: 0, 145, 255;
-  --ids__accent-RGB: 57, 53, 216;
+.notes-theme {
+  --ids__text-RGB: 60, 60, 60;
+  --ids__link-RGB: 44, 44, 44;
+  --ids__hover-RGB: 0, 110, 220;
+  --ids__accent-RGB: 0, 130, 240;
+  --ids__pen-RGB: 0, 65, 205;
   --ids__mark-RGB: 255, 200, 29;
-  --ids__surface-RGB: 240, 245, 250;
-  --ids__background-RGB: 0, 17, 38;
+  --ids__surface-RGB: 237, 237, 240;
+  --ids__background-RGB: 255, 255, 255;
 
   color: rgba(var(--ids__text-RGB), 1);
   background-color: rgba(var(--ids__background-RGB), 1);

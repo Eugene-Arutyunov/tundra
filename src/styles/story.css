@@ -31,9 +31,22 @@
 
   & h1 {
     font-size: 3.5em;
-    font-family: var(--gothic);
+    /* font-family: var(--gothic); */
     line-height: 0.9;
     margin-bottom: 0.4em;
+
+    @media (width < 768px) {
+      font-size: 2.3em;
+    }
+  }
+
+  & p {
+    font-size: 0.9em;
+
+    @media (width < 768px) {
+      font-size: 0.8em;
+
+    }
   }
 
 
@@ -71,6 +84,7 @@
   }
 }
 
+/* 
 .journal {
   padding: 0.3em;
   background: rgba(var(--ids__surface-RGB), 1);
@@ -204,6 +218,15 @@
     & p {
       font-weight: 400;
     }
+  }
+} */
+
+.about {
+  font-size: 0.9em;
+
+  @media (width < 768px) {
+    font-size: 0.8em;
+    padding: 0 1.3em;
   }
 }
 
