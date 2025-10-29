@@ -88,12 +88,57 @@
 .journal {
   padding: 0.3em;
   background: rgba(var(--ids__surface-RGB), 1);
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  border-radius: 0.2em;
+
+  &:hover {
+    background-color: rgba(218, 223, 236, 1);
+    transition: background-color 0s ease;
+
+    & .journal-nav {
+
+      & .nav-item {
+        color: rgba(var(--ids__hover-RGB), 1);
+        transition: color 0s ease;
+
+        &.date {
+
+          &::before {
+            border-bottom: 1px solid rgba(var(--ids__hover-RGB), 1);
+            transition: border 0s ease;
+          }
+
+          & .date-caption {
+            background-color: rgba(218, 223, 236, 1);
+            transition: background-color 0s ease, left 0.3s ease;
+          }
+        }
+
+        & .reload-icon-button {
+          border: 1px solid rgba(var(--ids__hover-RGB), 0.7);
+          transition: border 0s ease;
+
+          & .reload-icon {
+
+            & svg {
+              & .cls-1 {
+                stroke: rgba(var(--ids__hover-RGB), 1);
+                transition: stroke 0s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
 
-  & a.journal-nav {
-    padding: 0.7em 0.6em 0.8em;
-    font-size: 0.7em;
+  & .journal-nav {
+
+    font-size: 0.8em;
     display: flex;
+
     gap: 0.6em;
 
     border-radius: 0.4em;
@@ -105,10 +150,17 @@
 
 
     & .nav-item {
+      transition: color 0.5s ease;
+
+      &:not(.icon) {
+
+        padding: 0.3em;
+      }
 
       &.date {
         position: relative;
         flex-grow: 2;
+        margin-right: 0.3em;
 
 
         &::before {
@@ -116,9 +168,9 @@
           position: absolute;
           left: 0;
           right: 0;
-          top: 0.7em;
+          top: 1em;
 
-          border-bottom: 1px solid rgba(var(--ids__text-RGB), 1);
+          border-bottom: 1px solid rgba(var(--ids__text-RGB), 0.5);
           transition: border 0.5s ease;
 
         }
@@ -138,23 +190,32 @@
         }
       }
 
-      & .reload-icon {
-        width: 1.1em;
-        height: 1.2em;
+      & .reload-icon-button {
+        border: 1px solid rgba(var(--ids__text-RGB), 0.5);
+        transition: border 0.5s ease;
+        padding: 0.3em 1.5em 0.25em;
+        border-radius: 0.5em;
+        corner-shape: squircle;
 
-        & svg {
-          & .cls-1 {
-            stroke: rgba(var(--ids__text-RGB), 1);
-            stroke-miterlimit: 10;
-            stroke-width: 10px;
-            fill: none;
-            transition: stroke 0.5s ease;
+        & .reload-icon {
+          width: 1em;
+          height: 1.2em;
+
+          & svg {
+            & .cls-1 {
+              stroke: rgba(var(--ids__text-RGB), 1);
+              stroke-miterlimit: 10;
+              stroke-width: 10px;
+              fill: none;
+              transition: stroke 0.5s ease;
+            }
           }
         }
       }
+
     }
 
-    &:hover {
+    /* &:hover {
       opacity: 1;
       background-color: rgba(218, 223, 236, 1);
       transition: opacity 0s ease, color 0s ease, background-color 0s ease;
@@ -185,7 +246,7 @@
           }
         }
       }
-    }
+    } */
 
   }
 
@@ -194,8 +255,12 @@
     padding: 1.5em 2em 0em;
 
     & h2 {
-      font-size: 1.5em;
-      /* font-family: var(--gothic); */
+      font-size: 1.4em;
+      margin-bottom: 0;
+
+      @media (width < 768px) {
+        font-size: 1.25em;
+      }
 
     }
   }
@@ -209,7 +274,6 @@
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease;
-    /* min-height: 10em; */
 
     &.visible {
       display: block;
@@ -224,6 +288,8 @@
       font-weight: 400;
     }
   }
+
+
 }
 
 .about {
@@ -240,7 +306,7 @@
   position: relative;
   width: 15em;
   height: 15em;
-  margin: 2em auto 1em;
+  margin: 2em auto;
   border-radius: 50%;
   background-color: rgba(var(--ids__surface-RGB), 1);
   overflow: hidden;
@@ -284,7 +350,7 @@
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 

@@ -9,7 +9,7 @@
 Записи хранятся в `src/includes/journal-records-RU.html`:
 
 ```html
-<div class="journal-record" id="record-{N}" data-daте="{дата в формате: ДД.ММ.ГГГГ}">
+<div class="journal-record" id="record-{N}" data-date="{дата в формате: ДД.ММ.ГГГГ}">
   <div class="date">{дата в формате: 20 марта 2025}</div>
   <p>...</p>
 </div>
