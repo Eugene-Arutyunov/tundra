@@ -294,3 +294,28 @@
     opacity: 0;
   }
 }
+
+
+
+.full-journal {
+  & a.journal-nav {
+
+    display: none;
+  }
+
+  & .journal-title {
+    display: none;
+  }
+
+  & .journal-record {
+    display: block;
+    opacity: 1;
+
+    & .date {
+
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+  }
+}
