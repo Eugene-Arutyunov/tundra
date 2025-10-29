@@ -1,17 +1,42 @@
+.language-swither {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  font-size: 0.8em;
+  gap: 0.5em;
+  padding: 0.7em;
+  letter-spacing: 0.1em;
+
+
+  @media (width < 768px) {
+    position: static;
+    justify-content: center;
+  }
+
+  & .active {
+    border: 1px solid rgba(var(--ids__text-RGB), 1);
+    border-radius: 0.3em;
+    corner-shape: squircle;
+    padding: 0.05em 0.2em 0.05em 0.3em;
+    font-style: italic;
+  }
+
+}
+
 .title {
   padding: 1.5em 0 1em;
   text-align: center;
 
   & h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     font-family: var(--gothic);
     line-height: 0.9;
     margin-bottom: 0.4em;
   }
 
-  & p {
-    font-size: 0.8em;
-  }
+
 }
 
 .video {
@@ -154,7 +179,7 @@
     padding: 1em 2em 0em;
 
     & h2 {
-      font-size: 1.5em;
+      font-size: 2em;
       font-family: var(--gothic);
 
     }
@@ -179,5 +204,93 @@
     & p {
       font-weight: 400;
     }
+  }
+}
+
+
+.circle {
+  position: relative;
+  width: 25em;
+  height: 25em;
+  margin: 2em auto 1em;
+  border-radius: 50%;
+  background-color: rgba(var(--ids__surface-RGB), 1);
+  overflow: hidden;
+  animation: circle-animation 20s ease-in-out infinite;
+
+  @media (width < 768px) {
+    width: 15em;
+    height: 15em;
+  }
+
+  & .circle-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
+
+    &.bg-pale {
+      background-image: url('assets/bg-pale.png');
+    }
+
+    &.bg-blue {
+      background-image: url('assets/bg-blue.png');
+      animation: blue-bg-animation 20s linear infinite;
+    }
+
+    &.bg-red {
+      background-image: url('assets/bg-red.png');
+      animation: red-bg-animation 20s linear infinite;
+    }
+
+  }
+}
+
+@keyframes circle-animation {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes blue-bg-animation {
+
+  0%,
+  22% {
+    opacity: 0;
+  }
+
+  33%,
+  80% {
+    opacity: 1;
+  }
+
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes red-bg-animation {
+
+  0%,
+  55% {
+    opacity: 0;
+  }
+
+  66%,
+  88% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

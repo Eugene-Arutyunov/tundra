@@ -28,6 +28,13 @@
   src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
 
 :root {
   --sans: "Inter";
@@ -38,7 +45,7 @@
 body {
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Density */
@@ -58,8 +65,8 @@ html {
   --mobile-font-size-min: 14;
   --mobile-font-size-max: 32;
 
-  --desktop-font-size-min: 12;
-  --desktop-font-size-max: 24;
+  --desktop-font-size-min: 9.3;
+  --desktop-font-size-max: 20;
 
   --mobile-viewport-min: 320;
   --mobile-desktop-breakpoint: 768;
