@@ -238,8 +238,8 @@
 
 .circle {
   position: relative;
-  width: 25em;
-  height: 25em;
+  width: 15em;
+  height: 15em;
   margin: 2em auto 1em;
   border-radius: 50%;
   background-color: rgba(var(--ids__surface-RGB), 1);
