@@ -89,6 +89,7 @@
   padding: 0.3em;
   background: rgba(var(--ids__surface-RGB), 1);
 
+
   & a.journal-nav {
     padding: 0.7em 0.6em 0.8em;
     font-size: 0.7em;
@@ -190,21 +191,25 @@
 
   & .journal-title {
     text-align: center;
-    padding: 1em 2em 0em;
+    padding: 1.5em 2em 0em;
 
     & h2 {
-      font-size: 2em;
-      font-family: var(--gothic);
+      font-size: 1.5em;
+      /* font-family: var(--gothic); */
 
     }
   }
 
   & .journal-record {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     text-align: center;
     padding: 1em 2em 2em;
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease;
+    /* min-height: 10em; */
 
     &.visible {
       display: block;
