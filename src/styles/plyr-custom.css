@@ -127,4 +127,7 @@ media-player {
   media-play-button.plyr__control--overlaid {
     display: none !important;
   }
+  .plyr__menu__container .plyr__control > span {
+    width: auto;
+  }
 }
