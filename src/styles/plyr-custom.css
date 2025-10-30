@@ -66,8 +66,7 @@ media-player {
 
     & > div {
       color: rgb(var(--ids__surface-RGB));
-      background-image: linear-gradient(
-        to right,
+      background-image: linear-gradient(to right,
         rgba(var(--ids__link-RGB), 1),
         rgba(var(--ids__link-RGB), 1) 49%,
         rgba(var(--ids__hover-RGB), 1) 49%,
@@ -82,8 +81,7 @@ media-player {
       corner-shape: squircle;
 
       &:hover {
-        background-image: linear-gradient(
-          to right,
+        background-image: linear-gradient(to right,
           rgba(var(--ids__hover-RGB), 1),
           rgba(var(--ids__hover-RGB), 1) 49%,
           rgba(var(--ids__accent-RGB), 1) 49%,
@@ -96,38 +94,35 @@ media-player {
       transform: scale(1.1);
       transition: transform 0s ease;
     }
-
-    /* Loading state animation */
-    &[data-waiting] media-play-button.ids-play > div {
-      background-image: linear-gradient(
-        to right,
-        rgba(var(--ids__hover-RGB), 1),
-        rgba(var(--ids__hover-RGB), 1) 49%,
-        rgba(var(--ids__link-RGB), 1) 49%,
-        rgba(var(--ids__link-RGB), 1)
-      );
-      animation: video-loading 1.5s ease-out infinite;
-    }
-
-    /* Hide controls before video starts */
-    &:not([data-started]) media-plyr-layout {
-      opacity: 0;
-    }
-
-    /* Plyr layout customization */
-    media-plyr-layout {
-      z-index: 2 !important;
-
-      media-play-button.plyr__control--overlaid {
-        display: none !important;
-      }
-    }
   }
 
-  media-play-button.plyr__control--overlaid {
-    display: none !important;
+  /* Loading state animation */
+  &[data-waiting] media-play-button.ids-play > div {
+    background-image: linear-gradient(
+      to right,
+      rgba(var(--ids__hover-RGB), 1),
+      rgba(var(--ids__hover-RGB), 1) 49%,
+      rgba(var(--ids__link-RGB), 1) 49%,
+      rgba(var(--ids__link-RGB), 1)
+    );
+    animation: video-loading 1.5s ease-out infinite;
   }
-  .plyr__menu__container .plyr__control > span {
-    width: auto;
+
+  /* Hide controls before video starts */
+  &:not([data-started]) media-plyr-layout {
+    opacity: 0;
   }
+
+  /* Plyr layout customization */
+  media-plyr-layout {
+    z-index: 2 !important;
+
+    media-play-button.plyr__control--overlaid {
+      display: none !important;
+    }
+  }
+}
+
+.plyr__menu__container .plyr__control > span {
+  width: auto;
 }
