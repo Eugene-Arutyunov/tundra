@@ -1,6 +1,6 @@
 // Journal player functionality
 document.addEventListener('DOMContentLoaded', function() {
-  const journalNav = document.querySelector('.journal-nav');
+  const journal = document.querySelector('.journal');
   const journalRecords = document.querySelectorAll('.journal-record');
   let currentRecord = null;
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dayNumber = record.getAttribute('data-day');
     
     if (recordDate) {
-      const dateCaption = journalNav.querySelector('.date-caption');
+      const dateCaption = journal.querySelector('.date-caption');
       if (dateCaption && dayNumber) {
         const day = parseInt(dayNumber, 10);
         const leftPercent = ((day - 1) / 146) * 80;
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     updateUI(currentRecord);
   }
 
-  if (journalNav && journalRecords.length > 1) {
-    journalNav.addEventListener('click', function(e) {
+  if (journal && journalRecords.length > 1) {
+    journal.addEventListener('click', function(e) {
       e.preventDefault();
       
       // Select a random record that is different from the current one
