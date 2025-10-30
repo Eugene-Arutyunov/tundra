@@ -335,107 +335,108 @@
 
 
   }
+}
 
-  .about {
-    font-size: 0.9em;
+.about {
+  font-size: 0.9em;
 
-    @media (width < 768px) {
-      font-size: 0.8em;
-      padding: 0 1.3em;
-    }
+  @media (width < 768px) {
+    font-size: 0.8em;
+    padding: 0 1.3em;
   }
+}
 
 
-  .circle {
-    position: relative;
+.circle {
+  position: relative;
+  width: 15em;
+  height: 15em;
+  margin: 2em auto;
+  border-radius: 50%;
+  background-color: rgba(var(--ids__surface-RGB), 1);
+  overflow: hidden;
+  animation: circle-animation 20s ease-in-out infinite;
+
+  @media (width < 768px) {
     width: 15em;
     height: 15em;
-    margin: 2em auto;
-    border-radius: 50%;
-    background-color: rgba(var(--ids__surface-RGB), 1);
-    overflow: hidden;
-    animation: circle-animation 20s ease-in-out infinite;
-
-    @media (width < 768px) {
-      width: 15em;
-      height: 15em;
-    }
-
-    & .circle-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-size: 100% 100%;
-
-      &.bg-pale {
-        background-image: url('assets/bg-pale.png');
-      }
-
-      &.bg-blue {
-        background-image: url('assets/bg-blue.png');
-        animation: blue-bg-animation 20s linear infinite;
-      }
-
-      &.bg-red {
-        background-image: url('assets/bg-red.png');
-        animation: red-bg-animation 20s linear infinite;
-      }
-
-    }
   }
 
-  @keyframes circle-animation {
+  & .circle-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
 
-    0%,
-    100% {
-      transform: scale(1);
+    &.bg-pale {
+      background-image: url('assets/bg-pale.png');
     }
 
-    50% {
-      transform: scale(1.2);
+    &.bg-blue {
+      background-image: url('assets/bg-blue.png');
+      animation: blue-bg-animation 20s linear infinite;
     }
+
+    &.bg-red {
+      background-image: url('assets/bg-red.png');
+      animation: red-bg-animation 20s linear infinite;
+    }
+
   }
-
-  @keyframes blue-bg-animation {
-
-    0%,
-    22% {
-      opacity: 0;
-    }
-
-    33%,
-    80% {
-      opacity: 1;
-    }
-
-    81%,
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes red-bg-animation {
-
-    0%,
-    55% {
-      opacity: 0;
-    }
-
-    66%,
-    88% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-    }
-  }
-
-
-
 }
+
+@keyframes circle-animation {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes blue-bg-animation {
+
+  0%,
+  22% {
+    opacity: 0;
+  }
+
+  33%,
+  80% {
+    opacity: 1;
+  }
+
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes red-bg-animation {
+
+  0%,
+  55% {
+    opacity: 0;
+  }
+
+  66%,
+  88% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
 
 & .full-journal {
   & .journal {
