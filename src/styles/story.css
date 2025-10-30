@@ -31,7 +31,6 @@
 
   & h1 {
     font-size: 3.5em;
-    /* font-family: var(--gothic); */
     line-height: 0.9;
     margin-bottom: 0.4em;
 
@@ -211,42 +210,15 @@
             }
           }
         }
+
+        &:hover {
+          border: 1px solid rgba(var(--ids__hover-RGB), 1);
+        }
       }
 
     }
 
-    /* &:hover {
-      opacity: 1;
-      background-color: rgba(218, 223, 236, 1);
-      transition: opacity 0s ease, color 0s ease, background-color 0s ease;
 
-
-      & .nav-item {
-
-        &.date {
-
-          &::before {
-            border-bottom: 1px solid rgba(var(--ids__hover-RGB), 1);
-            transition: border 0s ease;
-          }
-
-          & .date-caption {
-            background-color: rgba(218, 223, 236, 1);
-            transition: background-color 0s ease, left 0.3s ease;
-          }
-        }
-      }
-
-      & .reload-icon {
-
-        & svg {
-          & .cls-1 {
-            stroke: rgba(var(--ids__hover-RGB), 1);
-            transition: stroke 0s ease;
-          }
-        }
-      }
-    } */
 
   }
 
@@ -266,9 +238,6 @@
   }
 
   & .journal-record {
-    /* display: flex;
-    justify-content: center;
-    align-content: center; */
     text-align: center;
     padding: 1em 4em 2em;
     display: none;
