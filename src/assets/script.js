@@ -4,6 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const journalRecords = document.querySelectorAll(".journal-record");
   let currentRecord = null;
 
+  // Find maximum day number for positioning calculations
+  function getMaxDayNumber() {
+    let maxDayNumber = 0;
+    journalRecords.forEach((record) => {
+      const dateString = record.getAttribute("data-date");
+      if (dateString) {
+        const dayNumber = calculateDayNumber(dateString);
+        if (dayNumber > maxDayNumber) {
+          maxDayNumber = dayNumber;
+        }
+      }
+    });
+    return maxDayNumber;
+  }
+
   // Function to calculate day number from date
   function calculateDayNumber(dateString) {
     // Parse date in format DD.MM.YYYY
@@ -22,6 +37,39 @@ document.addEventListener("DOMContentLoaded", function () {
     return dayDiff + 1; // Day 1 is 20.03.2025
   }
 
+  // Function to get ordinal suffix for English numbers
+  function getOrdinalSuffix(num) {
+    const lastDigit = num % 10;
+    const lastTwoDigits = num % 100;
+
+    // Special cases for 11th, 12th, 13th
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+      return "th";
+    }
+
+    // Regular cases
+    switch (lastDigit) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  }
+
+  // Function to format day title based on language
+  function formatDayTitle(dayNumber, language) {
+    if (language === "en") {
+      const suffix = getOrdinalSuffix(dayNumber);
+      return `${dayNumber}<sup>${suffix}</sup> day in the Tundra`;
+    } else {
+      return `${dayNumber}-й день в тундре`;
+    }
+  }
+
   // Helper function to update the UI with a record
   function updateUI(record) {
     // Update the date in the navigation
@@ -32,7 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const dayNumber = calculateDayNumber(dateString);
       const dateCaption = journal.querySelector(".date-caption");
       if (dateCaption) {
-        const leftPercent = ((dayNumber - 1) / 146) * 80;
+        const maxDayNumber = getMaxDayNumber();
+        const leftPercent = ((dayNumber - 1) / (maxDayNumber - 1)) * 80;
 
         // Set position first
         dateCaption.style.left = `${leftPercent}%`;
@@ -46,7 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Update the journal title with the day number
       const journalTitle = document.querySelector(".journal-title h2");
       if (journalTitle) {
-        journalTitle.textContent = `${dayNumber}-й день в тундре`;
+        const language = journal.getAttribute("data-lang") || "ru";
+        journalTitle.innerHTML = formatDayTitle(dayNumber, language);
       }
     }
   }

@@ -9,7 +9,6 @@
   padding: 0.7em;
   letter-spacing: 0.1em;
 
-
   @media (width < 768px) {
     position: static;
     justify-content: center;
@@ -22,7 +21,6 @@
     padding: 0.05em 0.2em 0.05em 0.3em;
     font-style: italic;
   }
-
 }
 
 .title {
@@ -44,15 +42,11 @@
 
     @media (width < 768px) {
       font-size: 0.8em;
-
     }
   }
-
-
 }
 
 .video {
-
   & .video-player {
     position: relative;
 
@@ -77,12 +71,9 @@
         color: rgba(var(--ids__hover-RGB), 1);
         transition: color 0s ease;
       }
-
-
     }
   }
 }
-
 
 .journal {
   padding: 0.3em;
@@ -90,19 +81,18 @@
   transition: background-color 0.5s ease;
   cursor: pointer;
   border-radius: 0.2em;
+  user-select: none;
 
   &:hover {
     background-color: rgba(218, 223, 236, 1);
     transition: background-color 0s ease;
 
     & .journal-nav {
-
       & .nav-item {
         color: rgba(var(--ids__hover-RGB), 1);
         transition: color 0s ease;
 
         &.date {
-
           &::before {
             border-bottom: 1px solid rgba(var(--ids__hover-RGB), 1);
             transition: border 0s ease;
@@ -110,16 +100,17 @@
 
           & .date-caption {
             background-color: rgba(218, 223, 236, 1);
-            transition: background-color 0s ease, left 0.3s ease;
+            transition:
+              background-color 0s ease,
+              left 0.3s ease;
           }
         }
 
         & .reload-icon-button {
-          border: 1px solid rgba(var(--ids__hover-RGB), 0.7);
+          border: 1px solid rgba(var(--ids__hover-RGB), 0.5);
           transition: border 0s ease;
 
           & .reload-icon {
-
             & svg {
               & .cls-1 {
                 stroke: rgba(var(--ids__hover-RGB), 1);
@@ -132,9 +123,7 @@
     }
   }
 
-
   & .journal-nav {
-
     font-size: 0.8em;
     display: flex;
 
@@ -144,15 +133,15 @@
 
     text-decoration: none;
     opacity: 0.5;
-    transition: opacity 0.5s ease, color 0.5s ease, background-color 0.5s ease;
-
-
+    transition:
+      opacity 0.5s ease,
+      color 0.5s ease,
+      background-color 0.5s ease;
 
     & .nav-item {
       transition: color 0.5s ease;
 
       &:not(.icon) {
-
         padding: 0.3em;
       }
 
@@ -161,9 +150,8 @@
         flex-grow: 2;
         margin-right: 0.3em;
 
-
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           right: 0;
@@ -171,7 +159,6 @@
 
           border-bottom: 1px solid rgba(var(--ids__text-RGB), 0.5);
           transition: border 0.5s ease;
-
         }
 
         & .date-caption {
@@ -181,11 +168,9 @@
           padding: 0 0.1em;
 
           background-color: rgba(var(--ids__surface-RGB), 1);
-          transition: background-color 0.5s ease, left 0.5s ease;
-
-
-
-
+          transition:
+            background-color 0.5s ease,
+            left 0.5s ease;
         }
       }
 
@@ -215,11 +200,7 @@
           border: 1px solid rgba(var(--ids__hover-RGB), 1);
         }
       }
-
     }
-
-
-
   }
 
   & .journal-title {
@@ -233,7 +214,6 @@
       @media (width < 768px) {
         font-size: 1.25em;
       }
-
     }
   }
 
@@ -265,10 +245,9 @@
         margin-top: 1em;
         margin-bottom: calc(var(--ids__density) * 0.4em);
 
-        &>p {
+        & > p {
           margin-bottom: 0.1em;
         }
-
       }
 
       & p.before-ul {
@@ -280,7 +259,6 @@
         @media (width < 768px) {
           width: 85%;
         }
-
       }
 
       & ul {
@@ -296,13 +274,8 @@
       & em {
         font-style: normal;
         font-size: 0.8em;
-
       }
-
-
     }
-
-
   }
 }
 
@@ -314,7 +287,6 @@
     padding: 0 1.3em;
   }
 }
-
 
 .circle {
   position: relative;
@@ -340,24 +312,22 @@
     background-size: 100% 100%;
 
     &.bg-pale {
-      background-image: url('assets/bg-pale.png');
+      background-image: url("assets/bg-pale.png");
     }
 
     &.bg-blue {
-      background-image: url('assets/bg-blue.png');
+      background-image: url("assets/bg-blue.png");
       animation: blue-bg-animation 20s linear infinite;
     }
 
     &.bg-red {
-      background-image: url('assets/bg-red.png');
+      background-image: url("assets/bg-red.png");
       animation: red-bg-animation 20s linear infinite;
     }
-
   }
 }
 
 @keyframes circle-animation {
-
   0%,
   100% {
     transform: scale(1);
@@ -369,7 +339,6 @@
 }
 
 @keyframes blue-bg-animation {
-
   0%,
   22% {
     opacity: 0;
@@ -387,7 +356,6 @@
 }
 
 @keyframes red-bg-animation {
-
   0%,
   55% {
     opacity: 0;
@@ -403,15 +371,9 @@
   }
 }
 
-
-
-
-
 & .full-journal {
   & .journal {
-
     & .journal-nav {
-
       display: none;
     }
 
@@ -424,7 +386,6 @@
       opacity: 1;
 
       & .date {
-
         display: block;
         font-weight: 600;
         margin-bottom: 0.5em;
