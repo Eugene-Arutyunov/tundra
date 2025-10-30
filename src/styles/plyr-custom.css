@@ -64,14 +64,15 @@ media-player {
     place-items: center;
     cursor: pointer;
 
-
-    &>div {
+    & > div {
       color: rgb(var(--ids__surface-RGB));
-      background-image: linear-gradient(to right,
-          rgba(var(--ids__link-RGB), 1),
-          rgba(var(--ids__link-RGB), 1) 49%,
-          rgba(var(--ids__hover-RGB), 1) 49%,
-          rgba(var(--ids__hover-RGB), 1));
+      background-image: linear-gradient(
+        to right,
+        rgba(var(--ids__link-RGB), 1),
+        rgba(var(--ids__link-RGB), 1) 49%,
+        rgba(var(--ids__hover-RGB), 1) 49%,
+        rgba(var(--ids__hover-RGB), 1)
+      );
       background-size: 201% 100%;
       background-position: -100% 0;
       border: solid 0 transparent;
@@ -81,29 +82,30 @@ media-player {
       corner-shape: squircle;
 
       &:hover {
-
-        background-image: linear-gradient(to right,
-            rgba(var(--ids__hover-RGB), 1),
-            rgba(var(--ids__hover-RGB), 1) 49%,
-            rgba(var(--ids__accent-RGB), 1) 49%,
-            rgba(var(--ids__accent-RGB), 1));
+        background-image: linear-gradient(
+          to right,
+          rgba(var(--ids__hover-RGB), 1),
+          rgba(var(--ids__hover-RGB), 1) 49%,
+          rgba(var(--ids__accent-RGB), 1) 49%,
+          rgba(var(--ids__accent-RGB), 1)
+        );
       }
     }
 
-    &:hover>div {
-
+    &:hover > div {
       transform: scale(1.1);
       transition: transform 0s ease;
-
     }
 
     /* Loading state animation */
-    &[data-waiting] media-play-button.ids-play>div {
-      background-image: linear-gradient(to right,
-          rgba(var(--ids__hover-RGB), 1),
-          rgba(var(--ids__hover-RGB), 1) 49%,
-          rgba(var(--ids__link-RGB), 1) 49%,
-          rgba(var(--ids__link-RGB), 1));
+    &[data-waiting] media-play-button.ids-play > div {
+      background-image: linear-gradient(
+        to right,
+        rgba(var(--ids__hover-RGB), 1),
+        rgba(var(--ids__hover-RGB), 1) 49%,
+        rgba(var(--ids__link-RGB), 1) 49%,
+        rgba(var(--ids__link-RGB), 1)
+      );
       animation: video-loading 1.5s ease-out infinite;
     }
 
@@ -121,3 +123,8 @@ media-player {
       }
     }
   }
+
+  media-play-button.plyr__control--overlaid {
+    display: none !important;
+  }
+}
