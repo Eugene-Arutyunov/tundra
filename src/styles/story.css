@@ -270,10 +270,14 @@
     justify-content: center;
     align-content: center; */
     text-align: center;
-    padding: 1em 2em 2em;
+    padding: 1em 4em 2em;
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease;
+
+    @media (width < 768px) {
+      padding: 1em 2em 2em;
+    }
 
     &.visible {
       display: block;
@@ -286,6 +290,7 @@
 
     & .journal-record-text {
       & blockquote {
+        font-style: italic;
         font-size: 1em;
         font-weight: 500;
         margin-top: 1em;
@@ -297,7 +302,30 @@
 
       }
 
+      & p.before-ul {
+        text-align: left;
+        margin-top: 1em;
+        width: 70%;
+        margin: 1em auto calc(var(--ids__density) * 0.4em);
+
+        @media (width < 768px) {
+          width: 85%;
+        }
+
+      }
+
+      & ul {
+        width: 70%;
+        margin: 0em auto 1em;
+        text-align: left;
+
+        @media (width < 768px) {
+          width: 85%;
+        }
+      }
+
       & em {
+        font-style: normal;
         font-size: 0.8em;
 
       }
