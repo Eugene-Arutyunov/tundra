@@ -1,8 +1,6 @@
 20th of March  
 I've been preparing for this for nine months. For the past few days, I've been living with the thrilling sensation that the natural, familiar, and understandable flow of my life is about to be disrupted, and I will find myself in a completely different reality. The day after tomorrow, I will be sleeping in a chum, a raw-hide tent, and will spend the next 120 days in the tundra with a family of Nenets reindeer herders.
 
-
-
 20th of March
 
 Just a few months ago, while falling asleep in my warm, soft bed, I started to be momentarily seized by horror at the thought that I would be spending the next four months sleeping in the cold and would have to forget about warm showers. I don't know why these feelings came to me just before bedtime, but by morning they were gone.
@@ -347,6 +345,9 @@ Watch yourself — be cautious.
 
 Let's say you get sick. A reindeer herder can't press pause on anything — you must go and do what must be done. The reindeer are moving north; otherwise, it's death. And you need your family, helpers, your wife. You can't manage alone. You need the team.
 
+13th of April
+I feel the joy of being a child and learning to walk again. Life is a discovery. I feel like a child, and it's so wonderful.
+
 15th of April
 
 It's simply impossible to live alone here. The wind howls outside the chum walls, and the rain mixes with snow. It's profoundly dreary. But over tea, when everyone is together, it's good.
@@ -487,6 +488,10 @@ For a whole month, the lack of personal space never made me uncomfortable. Maybe
 24th of April
 
 The story about Amundsen feeding dogs to other dogs was met with complete understanding by the Nenets).
+
+24th of April
+
+It's like I'm blind and I'm just starting to tactilely feel the face of a new person, trying to understand it, but my hands are frozen in the cold, this face is this other life.
 
 25th of April
 
@@ -772,6 +777,9 @@ We are migrating.
 Tolik didn't bring my whiskey and didn't even say anything…
 
 15th of May
+Why was I born where I was born, and not as a Nenets in the Arctic? Why am I me? And is it my merit that I am me now? No :) It's all some kind of invisible math.
+
+15th of May
 
 So we arrive in a lifeless tundra, it's cold, snow is falling — we set up the chum, light the stove, and soon a living space emerges, a home, coziness. And then the reverse happens. The warmth of a human in this cold, boundless world.
 
@@ -848,6 +856,10 @@ And we even opened cognac - Ilyusha arrived by helicopter!)
 When it's sunny and warm — you want to live))  
 And I also started reading the Kolyma Tales.  
 I think in these four months I'll become the coolest drinking buddy — will have stories to tell)
+
+18th of May
+
+There is no word “thank you” in the Nenets language, that is, it does not exist at all as a concept, as a mental construct. Language reflects thinking. How does the Nenets think? If someone helped you, did something good, then it's necessary. This is the norm. And you would have helped and will help. There can be no doubt about it. It's a given. It's a man. This is the tundra. Why waste time and energy on unnecessary conversations?
 
 19th of May
 
@@ -972,6 +984,12 @@ May 25
 Do Nenets really choose this way of life? They don’t choose their identity. Once born a Nenets, a Nenets you will remain; it’s not a nationality, it’s a way of being.
 
 I suppose peasants in the 19th century didn’t choose their way of being either.
+
+May 25
+
+For some reason, right now and here in a closed small group, without communication, in a white, boundless, lifeless and endless tundra, you feel connected to all of humanity and your responsibility for everything. It's like we're flying in space in the middle of a lifeless, vast cosmos, and the pale blue dot is so far away that maybe the world is gone. And we have a responsibility to ensure that this fire of collective knowledge does not go out. We may not have books or seeds of cultivated plants with us, but we have genes, and what we know, but do not yet understand or do not remember, our souls are alive. And the children.
+
+And then you realize that we've been playing the game so much, and we're all one, the family, all the humanity.
 
 May 26
 
@@ -1253,6 +1271,10 @@ We stayed put and didn’t move
 Inspected summer and winter sleds
 
 Tomorrow we’ll stay put again — we’re waiting for the swell to go down
+
+June 11
+
+Unconditional acceptance of fate eliminates the stress of self-realization. If you are born a Nenets, you will be a Nenets, if you are born a Kshatriya, you will die a Kshatriya. The joy of choosing, finding oneself, and self-realization has a high price in the form of stress and the risk of self-deception and failure)
 
 June 12
 
@@ -1986,6 +2008,10 @@ August 1
 This particular grass, this particular stone — I'm lying down and looking at them, and then I realize that I'm thinking in concepts, not particularities. There are so many things that we just don’t see... at this moment, but here this grass is growing, this piece of land lives its own life... attention to detail…
 
 The fate of flowers.
+
+August 1
+
+Nenets definitely don't all speak in words. They speak with deeds and attitudes. This is an understanding without words.
 
 August 2
 
