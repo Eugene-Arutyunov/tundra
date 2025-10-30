@@ -66,7 +66,8 @@ media-player {
 
     & > div {
       color: rgb(var(--ids__surface-RGB));
-      background-image: linear-gradient(to right,
+      background-image: linear-gradient(
+        to right,
         rgba(var(--ids__link-RGB), 1),
         rgba(var(--ids__link-RGB), 1) 49%,
         rgba(var(--ids__hover-RGB), 1) 49%,
@@ -81,7 +82,8 @@ media-player {
       corner-shape: squircle;
 
       &:hover {
-        background-image: linear-gradient(to right,
+        background-image: linear-gradient(
+          to right,
           rgba(var(--ids__hover-RGB), 1),
           rgba(var(--ids__hover-RGB), 1) 49%,
           rgba(var(--ids__accent-RGB), 1) 49%,
@@ -121,8 +123,7 @@ media-player {
       display: none !important;
     }
   }
-}
-
-.plyr__menu__container .plyr__control > span {
-  width: auto;
+  .plyr__controls__item.plyr__volume {
+    flex-grow: 0;
+  }
 }
