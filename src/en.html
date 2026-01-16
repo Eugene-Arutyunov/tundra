@@ -1,4 +1,5 @@
-{% extends 'layout.html' %} {% set pageTitle = '147 days in the Tundra' %} {% set pageDesc = 'A film by Fyodor Ovchinnikov' %} {% block content %}
+{% extends 'layout.html' %} {% set pageTitle = '147 days in the Tundra' %} {%
+set pageDesc = 'A film by Fyodor Ovchinnikov' %} {% block content %}
 <div class="language-swither">
   <a href="/">RU</a>
   <div class="active">EN</div>
@@ -26,24 +27,46 @@
 <div class="ids__wrapper">
   <div class="ids__space XS"></div>
   {% include "journal-EN.html" %}
+  <div class="ids__space M"></div>
+</div>
+<div class="ids__wrapper L">
+  <div class="video">
+    <div class="video-nav"></div>
+    <div class="video-player">
+      <iframe
+        style="width: 100%; aspect-ratio: 560 / 315"
+        src="https://www.youtube.com/embed/G51EOq0yAro"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
 <div class="ids__wrapper">
   <div class="ids__space L"></div>
   <div class="about">
     <p>
-      In the spring of 2024, I made a decision. It had been ripening for the last several years. It was not a crisis. Not a trial to become stronger for something. It was not an
-      escape from myself and reality, but rather an attempt to understand what “I” and “reality” were.
+      In the spring of 2024, I made a decision. It had been ripening for the
+      last several years. It was not a crisis. Not a trial to become stronger
+      for something. It was not an escape from myself and reality, but rather an
+      attempt to understand what “I” and “reality” were.
     </p>
 
     <p>
-      In March 2025, I set out for the Arctic, where I was welcomed by a wonderful family of Nenets reindeer herders. Over the course of almost five months, we travelled 730
-      kilometres by reindeer from the Gulf of Ob to the shores of the Arctic Ocean. To the very edge of the earth. All that time, I recorded the experience of that different life
-      on a video camera and in the notes on my phone.
+      In March 2025, I set out for the Arctic, where I was welcomed by a
+      wonderful family of Nenets reindeer herders. Over the course of almost
+      five months, we travelled 730 kilometres by reindeer from the Gulf of Ob
+      to the shores of the Arctic Ocean. To the very edge of the earth. All that
+      time, I recorded the experience of that different life on a video camera
+      and in the notes on my phone.
     </p>
 
     <p>
-      This film is an experiment in solo cinematography and a desire to share this experience with you. New materials and news will gradually appear on this website. The film
-      is scheduled to be released in 2026.
+      This film is an experiment in solo cinematography and a desire to share
+      this experience with you. New materials and news will gradually appear on
+      this website. The film is scheduled to be released in 2026.
     </p>
 
     <p><em>Fyodor Ovchinnikov</em></p>
